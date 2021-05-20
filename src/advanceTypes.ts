@@ -47,5 +47,15 @@ printEmployeeInfo(e1)
 
 // instanceof method for typeGaurd
 class Car {
-    
+    drive(){
+        console.log('Driving...')
+    }
+}
+class Truck{
+    drive(){
+        console.log('Driving a truck...')
+    }
+    loadCargo(amount:number){
+        console.log('Loading cargo....'+amount)
+    }
 }
