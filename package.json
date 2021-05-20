@@ -1,0 +1,19 @@
+{
+  "name": "react-bootcamp-softobiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asalwania/React-Bootcamp-softobiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asalwania/React-Bootcamp-softobiz/issues"
+  },
+  "homepage": "https://github.com/asalwania/React-Bootcamp-softobiz#readme"
+}
