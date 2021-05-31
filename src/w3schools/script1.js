@@ -701,166 +701,258 @@
 // ----------------------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------------------
 
-// Boolean Values
+// // Boolean Values
 
-// basically boolean values represents one of two values: true or false
+// // basically boolean values represents one of two values: true or false
 
-// very often in programing , we need a data type that can only have on of the two values,like:
-//            yes/no
-//            on/off
-//            true/false
+// // very often in programing , we need a data type that can only have on of the two values,like:
+// //            yes/no
+// //            on/off
+// //            true/false
 
-console.log(10 > 9); // will return true because statement is right
-console.log(10 < 9); // will return false because statement is wrong
+// console.log(10 > 9); // will return true because statement is right
+// console.log(10 < 9); // will return false because statement is wrong
 
-// Comparisons and Conditions:-
+// // Comparisons and Conditions:-
 
-//        Operator	        Description	                    Example
-//        ==	              equal to	                      if (day == "Monday")
-//        >	                greater than	                  if (salary > 9000)
-//        <	                less than	                      if (age < 18)
-//        >=                greater than or equal to        if(age >= 18)
-//        <=                less than or equal to        if(age <= 18)
+// //        Operator	        Description	                    Example
+// //        ==	              equal to	                      if (day == "Monday")
+// //        >	                greater than	                  if (salary > 9000)
+// //        <	                less than	                      if (age < 18)
+// //        >=                greater than or equal to        if(age >= 18)
+// //        <=                less than or equal to        if(age <= 18)
 
-// boolean of 0 is false and 1 is true
-console.log(Boolean(0)); // return false
-console.log(Boolean(1)); // return true
+// // boolean of 0 is false and 1 is true
+// console.log(Boolean(0)); // return false
+// console.log(Boolean(1)); // return true
 
-// the difference between (x==y) and (x===y).
-// == only checks values whereas === also checks data types with values e.g.
-console.log("5" == 5); // will return true
-console.log("5" === 5); // will return false
+// // the difference between (x==y) and (x===y).
+// // == only checks values whereas === also checks data types with values e.g.
+// console.log("5" == 5); // will return true
+// console.log("5" === 5); // will return false
 
-// Comparing two JavaScript objects will always return false.
+// // Comparing two JavaScript objects will always return false.
 
-// JS Comarisons
+// // JS Comarisons
 
-// Operator	              Description	                      Comparing	            Returns
+// // Operator	              Description	                      Comparing	            Returns
 
-// ==	                    equal to	                        x == 8	              false
-//                                                          x == 5	true
-//                                                          x == "5"	true
+// // ==	                    equal to	                        x == 8	              false
+// //                                                          x == 5	true
+// //                                                          x == "5"	true
 
-// ===	                  equal value and equal type	      x === 5	              true
-//                                                          x === "5"	false
+// // ===	                  equal value and equal type	      x === 5	              true
+// //                                                          x === "5"	false
 
-// !=	                    not equal	                        x != 8	              true
+// // !=	                    not equal	                        x != 8	              true
 
-// !==	                  not equal value or
+// // !==	                  not equal value or
 
-//                        not equal type	                  x !== 5	              false
-//                                                          x !== "5"	true
-//                                                          x !== 8	true
+// //                        not equal type	                  x !== 5	              false
+// //                                                          x !== "5"	true
+// //                                                          x !== 8	true
 
-// >	                    greater than	                    x > 8	                false
+// // >	                    greater than	                    x > 8	                false
 
-// <	                    less than	                        x < 8	                true
+// // <	                    less than	                        x < 8	                true
 
-// >=	                    greater than or equal to	        x >= 8	              false
+// // >=	                    greater than or equal to	        x >= 8	              false
 
-// <=	                    less than or equal to	            x <= 8	              true
+// // <=	                    less than or equal to	            x <= 8	              true
 
-//JavaScript if else and else if:-
+// //JavaScript if else and else if:-
 
-// there are conditional statements in used to perform certain operations if they fullfill given conditions
+// // there are conditional statements in used to perform certain operations if they fullfill given conditions
 
-// 'if' Statement
-// it is used to specify a block of js code to be executed if a condition is true.
-// e.g.
-if ("19" == 19) {
-  console.log(true);
+// // 'if' Statement
+// // it is used to specify a block of js code to be executed if a condition is true.
+// // e.g.
+// if ("19" == 19) {
+//   console.log(true);
+// }
+
+// // 'else' statement
+// // it will execute the bolck which will not fullfill if statement
+// if ("19" === 19) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// // 'else if' statement
+// // it is used to specify new condition if the first condition is false
+// if ("19" === 19) {
+//   //.......
+// } else if ("19" === 19) {
+//   //......
+// } else {
+//   //.......
+// }
+
+// // switch statement
+// // the switch statement is used to select one of many code blocks to be executed
+// const nm = "Alka";
+// switch (nm) {
+//   case "Ajay":
+//     console.log("Hello Ajay");
+//     break;
+//   case "Alka":
+//     console.log("Hello Alka");
+//     break;
+//   default:
+//     return "Hello user";
+// }
+
+// // we can use default case any where it is not mendetory to use it at last
+// // but we need to use break statement after default is it is not in last
+
+// // switch cases use strict comperision (===)
+
+// // if we want to execute a code again and again with different values we can use loop
+// // there are different kinds of loops
+// // for -        loops through a block of code a number of times
+// // for/in -     loops through the properties of an object
+// // for/of -     loops through the values of an iterable object
+// // while -      loops through a block of code while a specified condition is true
+// // do/while -   also loops through a block of code while a specified condition is true
+
+// // for loop
+// for (let i = 0; i <= 4; i++) {
+//   console.log(i);
+// }
+
+// // for in loop
+// const arr = ["ajay", "alka", "pooja", "kamlesh"];
+// for (i in arr) {
+//   console.log(i); // will console indexes of array elements
+// }
+
+// // for of loop
+// for (i of arr) {
+//   console.log(i); // will console elements of array
+// }
+
+// // while loop
+// // it loops through a block of code as long as a specified condition is true
+// let x = 0;
+// while (x < 3) {
+//   console.log("The number is ", x + 1);
+//   x++;
+// }
+
+// // do WHile
+// // the do while loop is a varient of the while loop. this loop will execute the block once, before checking if the condition is true
+// x = 0;
+// do {
+//   x++;
+//   console.log(x);
+// } while (x < 10);
+
+// // JS Break
+// // the break statement jumps out of a loop
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) {
+//     break;
+//   }
+//   console.log("The number is " + i);
+// }
+
+// // and continue statement 'jumps over' one iteration in the loop
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) {
+//     continue;
+//   }
+//   console.log("The number is " + i);
+// }
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------
+// JS type conversion
+
+// there are five diffrerent data types that can contain values in js:
+// String,number,boolean,object,function
+
+// And there are six types of objects
+// object,, Date, Array String, Number, Boolean
+
+// and 2 data types that cannot contain values:
+// null, undefined
+
+// we can use type of operator to find the type of a js variable
+// typeof "John";                               // Returns "string"
+// typeof 3.14;                                 // Returns "number"
+// typeof NaN;                                  // Returns "number"
+// typeof false;                                // Returns "boolean"
+// typeof [1, 2, 3, 4];                         // Returns "object"
+// typeof { name: "John", age: 34 };            // Returns "object"
+// typeof new Date();                           // Returns "object"
+// typeof function () {};                       // Returns "function"
+// typeof myCar;                                // Returns "undefined" *
+// typeof null;                                 // Returns "object"
+
+// to convert data into string
+true.toString(); // returns "true"
+String(true); // returns "true"
+String(123); // returns "123"
+String(Date()); // return "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+Date.toString(); // return same as above line
+
+// converting strings to a number
+Number("3.14"); // returns 3.14
+Number(" "); // returns 0
+Number(""); // returns 0
+Number("99 88"); // returns NaN when it cannot be converted
+console.log(+"5"); // returns 5
+
+// Automatic Type Conversion:
+5 + null; // returns 5         because null is converted to 0
+"5" + null; // returns "5null"   because null is converted to "null"
+"5" + 2; // returns "52"      because 2 is converted to "2"
+"5" - 2; // returns 3         because "5" is converted to 5
+"5" * "2"; // returns 10        because "5" and "2" are converted to 5 and 2
+
+// JavaScript Bitwise Operators
+console.log(5 & 1);
+console.log(5 | 1);
+console.log(~0101);
+console.log(~0101);
+console.log(4 ^ 1);
+
+// Regular expression in js
+// seraching with Regex
+let str = "Visit W3Schools";
+let n = str.replace(/w3schools/i,'Miscrosoft');
+console.log(n);
+
+// find by [abc] 
+console.log(str.search(/[s]/g))
+console.log(str.replace(/[s]/g,"S"));
+
+//Try and catch
+
+try {
+    const b=5
+    debugger;
+    b=6
+    console.log(b)
+} catch (error) {
+    console.log('Cannot add value to constant')
+}finally{
+    console.log('this will execute in every condition')
 }
 
-// 'else' statement
-// it will execute the bolck which will not fullfill if statement
-if ("19" === 19) {
-  console.log(true);
-} else {
-  console.log(false);
+class Person{
+    constructor(name,age,department){
+        this.name = name,
+        this.age=age,
+        this.department=department
+    }
+
+    getInfo = ()=>{
+        console.log(`${this.name} is ${this.age} years old and works in ${this.department} department`)
+    }
 }
 
-// 'else if' statement
-// it is used to specify new condition if the first condition is false
-if ("19" === 19) {
-  //.......
-} else if ("19" === 19) {
-  //......
-} else {
-  //.......
-}
-
-// switch statement
-// the switch statement is used to select one of many code blocks to be executed
-const nm = "Alka";
-switch (nm) {
-  case "Ajay":
-    console.log("Hello Ajay");
-    break;
-  case "Alka":
-    console.log("Hello Alka");
-    break;
-  default:
-    return "Hello user";
-}
-
-// we can use default case any where it is not mendetory to use it at last
-// but we need to use break statement after default is it is not in last
-
-// switch cases use strict comperision (===)
-
-// if we want to execute a code again and again with different values we can use loop
-// there are different kinds of loops
-// for -        loops through a block of code a number of times
-// for/in -     loops through the properties of an object
-// for/of -     loops through the values of an iterable object
-// while -      loops through a block of code while a specified condition is true
-// do/while -   also loops through a block of code while a specified condition is true
-
-// for loop
-for (let i = 0; i <= 4; i++) {
-  console.log(i);
-}
-
-// for in loop
-const arr = ["ajay", "alka", "pooja", "kamlesh"];
-for (i in arr) {
-  console.log(i); // will console indexes of array elements
-}
-
-// for of loop
-for (i of arr) {
-  console.log(i); // will console elements of array
-}
-
-// while loop
-// it loops through a block of code as long as a specified condition is true
-let x = 0;
-while (x < 3) {
-  console.log("The number is ", x + 1);
-  x++;
-}
-
-// do WHile
-// the do while loop is a varient of the while loop. this loop will execute the block once, before checking if the condition is true
-x = 0;
-do {
-  x++;
-  console.log(x);
-} while (x < 10);
-
-// JS Break
-// the break statement jumps out of a loop
-for (let i = 0; i < 10; i++) {
-  if (i === 3) {
-    break;
-  }
-  console.log("The number is " + i);
-}
-
-// and continue statement 'jumps over' one iteration in the loop
-for (let i = 0; i < 10; i++) {
-  if (i === 3) {
-    continue;
-  }
-  console.log("The number is " + i);
-}
+const emp1 = new Person('Ajay',29,'IT')
+emp1.getInfo()
+// git commit -m "upto classes done "
