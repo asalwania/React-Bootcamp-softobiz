@@ -867,92 +867,129 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------------------
-// JS type conversion
+// // JS type conversion
 
-// there are five diffrerent data types that can contain values in js:
-// String,number,boolean,object,function
+// // there are five diffrerent data types that can contain values in js:
+// // String,number,boolean,object,function
 
-// And there are six types of objects
-// object,, Date, Array String, Number, Boolean
+// // And there are six types of objects
+// // object,, Date, Array String, Number, Boolean
 
-// and 2 data types that cannot contain values:
-// null, undefined
+// // and 2 data types that cannot contain values:
+// // null, undefined
 
-// we can use type of operator to find the type of a js variable
-// typeof "John";                               // Returns "string"
-// typeof 3.14;                                 // Returns "number"
-// typeof NaN;                                  // Returns "number"
-// typeof false;                                // Returns "boolean"
-// typeof [1, 2, 3, 4];                         // Returns "object"
-// typeof { name: "John", age: 34 };            // Returns "object"
-// typeof new Date();                           // Returns "object"
-// typeof function () {};                       // Returns "function"
-// typeof myCar;                                // Returns "undefined" *
-// typeof null;                                 // Returns "object"
+// // we can use type of operator to find the type of a js variable
+// // typeof "John";                               // Returns "string"
+// // typeof 3.14;                                 // Returns "number"
+// // typeof NaN;                                  // Returns "number"
+// // typeof false;                                // Returns "boolean"
+// // typeof [1, 2, 3, 4];                         // Returns "object"
+// // typeof { name: "John", age: 34 };            // Returns "object"
+// // typeof new Date();                           // Returns "object"
+// // typeof function () {};                       // Returns "function"
+// // typeof myCar;                                // Returns "undefined" *
+// // typeof null;                                 // Returns "object"
 
-// to convert data into string
-true.toString(); // returns "true"
-String(true); // returns "true"
-String(123); // returns "123"
-String(Date()); // return "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
-Date.toString(); // return same as above line
+// // to convert data into string
+// true.toString(); // returns "true"
+// String(true); // returns "true"
+// String(123); // returns "123"
+// String(Date()); // return "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+// Date.toString(); // return same as above line
 
-// converting strings to a number
-Number("3.14"); // returns 3.14
-Number(" "); // returns 0
-Number(""); // returns 0
-Number("99 88"); // returns NaN when it cannot be converted
-console.log(+"5"); // returns 5
+// // converting strings to a number
+// Number("3.14"); // returns 3.14
+// Number(" "); // returns 0
+// Number(""); // returns 0
+// Number("99 88"); // returns NaN when it cannot be converted
+// console.log(+"5"); // returns 5
 
-// Automatic Type Conversion:
-5 + null; // returns 5         because null is converted to 0
-"5" + null; // returns "5null"   because null is converted to "null"
-"5" + 2; // returns "52"      because 2 is converted to "2"
-"5" - 2; // returns 3         because "5" is converted to 5
-"5" * "2"; // returns 10        because "5" and "2" are converted to 5 and 2
+// // Automatic Type Conversion:
+// 5 + null; // returns 5         because null is converted to 0
+// "5" + null; // returns "5null"   because null is converted to "null"
+// "5" + 2; // returns "52"      because 2 is converted to "2"
+// "5" - 2; // returns 3         because "5" is converted to 5
+// "5" * "2"; // returns 10        because "5" and "2" are converted to 5 and 2
 
-// JavaScript Bitwise Operators
-console.log(5 & 1);
-console.log(5 | 1);
-console.log(~0101);
-console.log(~0101);
-console.log(4 ^ 1);
+// // JavaScript Bitwise Operators
+// console.log(5 & 1);
+// console.log(5 | 1);
+// console.log(~0101);
+// console.log(~0101);
+// console.log(4 ^ 1);
 
-// Regular expression in js
-// seraching with Regex
-let str = "Visit W3Schools";
-let n = str.replace(/w3schools/i,'Miscrosoft');
-console.log(n);
+// // Regular expression in js
+// // seraching with Regex
+// let str = "Visit W3Schools";
+// let n = str.replace(/w3schools/i,'Miscrosoft');
+// console.log(n);
 
-// find by [abc] 
-console.log(str.search(/[s]/g))
-console.log(str.replace(/[s]/g,"S"));
+// // find by [abc] 
+// console.log(str.search(/[s]/g))
+// console.log(str.replace(/[s]/g,"S"));
 
-//Try and catch
+// //Try and catch
 
-try {
-    const b=5
-    debugger;
-    b=6
-    console.log(b)
-} catch (error) {
-    console.log('Cannot add value to constant')
-}finally{
-    console.log('this will execute in every condition')
-}
+// try {
+//     const b=5
+//     debugger;
+//     b=6
+//     console.log(b)
+// } catch (error) {
+//     console.log('Cannot add value to constant')
+// }finally{
+//     console.log('this will execute in every condition')
+// }
 
-class Person{
-    constructor(name,age,department){
-        this.name = name,
-        this.age=age,
-        this.department=department
-    }
+// class Person{
+//     constructor(name,age,department){
+//         this.name = name,
+//         this.age=age,
+//         this.department=department
+//     }
 
-    getInfo = ()=>{
-        console.log(`${this.name} is ${this.age} years old and works in ${this.department} department`)
-    }
-}
+//     getInfo = ()=>{
+//         console.log(`${this.name} is ${this.age} years old and works in ${this.department} department`)
+//     }
+// }
 
-const emp1 = new Person('Ajay',29,'IT')
-emp1.getInfo()
-// git commit -m "upto classes done "
+// const emp1 = new Person('Ajay',29,'IT')
+// emp1.getInfo()
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Javascript JSON (javascript object notation)
+// json is a format for storing and transporting data 
+// it is often used when data is sent from server to a web page
+// e.g.
+var text =
+  '{ "employees" : [' +
+  '{ "firstName":"John" , "lastName":"Doe" },' +
+  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+// convert json data to js object
+const obj = JSON.parse(text)
+console.log(obj)
+
+
+
+// js debugging
+
+
+// js resereved keyword
+// abstract	arguments	await*	boolean
+// break	byte	case	catch
+// char	class*	const	continue
+// debugger	default	delete	do
+// double	else	enum*	eval
+// export*	extends*	false	final
+// finally	float	for	function
+// goto	if	implements	import*
+// in	instanceof	int	interface
+// let*	long	native	new
+// null	package	private	protected
+// public	return	short	static
+// super*	switch	synchronized	this
+// throw	throws	transient	true
+// try	typeof	var	void
+// volatile	while	with	yield
