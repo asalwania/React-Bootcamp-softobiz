@@ -924,7 +924,7 @@
 // let n = str.replace(/w3schools/i,'Miscrosoft');
 // console.log(n);
 
-// // find by [abc] 
+// // find by [abc]
 // console.log(str.search(/[s]/g))
 // console.log(str.replace(/[s]/g,"S"));
 
@@ -958,38 +958,91 @@
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Javascript JSON (javascript object notation)
-// json is a format for storing and transporting data 
-// it is often used when data is sent from server to a web page
-// e.g.
-var text =
-  '{ "employees" : [' +
-  '{ "firstName":"John" , "lastName":"Doe" },' +
-  '{ "firstName":"Anna" , "lastName":"Smith" },' +
-  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-// convert json data to js object
-const obj = JSON.parse(text)
-console.log(obj)
+// // Javascript JSON (javascript object notation)
+// // json is a format for storing and transporting data
+// // it is often used when data is sent from server to a web page
+// // e.g.
+// var text =
+//   '{ "employees" : [' +
+//   '{ "firstName":"John" , "lastName":"Doe" },' +
+//   '{ "firstName":"Anna" , "lastName":"Smith" },' +
+//   '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+// // convert json data to js object
+// const obj = JSON.parse(text)
+// console.log(obj)
 
+// // js debugging
 
+// // js resereved keyword
+// // abstract	arguments	await*	boolean
+// // break	byte	case	catch
+// // char	class*	const	continue
+// // debugger	default	delete	do
+// // double	else	enum*	eval
+// // export*	extends*	false	final
+// // finally	float	for	function
+// // goto	if	implements	import*
+// // in	instanceof	int	interface
+// // let*	long	native	new
+// // null	package	private	protected
+// // public	return	short	static
+// // super*	switch	synchronized	this
+// // throw	throws	transient	true
+// // try	typeof	var	void
+// // volatile	while	with	yield
 
-// js debugging
+// -----------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------
 
+// Js 2009(es5)
+// ECMAScript 2009, also known as es5, was the first major revision to javascript.
+// this.chapter describes the most important features of es5
 
-// js resereved keyword
-// abstract	arguments	await*	boolean
-// break	byte	case	catch
-// char	class*	const	continue
-// debugger	default	delete	do
-// double	else	enum*	eval
-// export*	extends*	false	final
-// finally	float	for	function
-// goto	if	implements	import*
-// in	instanceof	int	interface
-// let*	long	native	new
-// null	package	private	protected
-// public	return	short	static
-// super*	switch	synchronized	this
-// throw	throws	transient	true
-// try	typeof	var	void
-// volatile	while	with	yield
+// "use strict":-
+// this defines that js code should be executed in "strict mode".
+
+// String.trim():-
+// removes whitespace from both sides of a string
+let str = "       Hello wolrd!    ";
+console.log(str.trim());
+
+// Array.isArray()
+// this method checks whether an object is an array
+const fruits = ["banana", "orange", "apple", "mango"];
+console.log(Array.isArray(fruits));
+
+// Array.forEach()
+// Array.map()
+// Array.filter()
+// Array.reduce()
+// getter and setter
+
+// JS Objects
+
+// properties:- these are the values associated with a js object
+// a js object is a collection of unordered properties.
+//properties can usually be changed, added and deleted, but some are readonly
+
+// The this keyword
+
+// in a function defination, this refers to the 'owner' of the fucntion
+
+const person = { name: "John", age: 30, city: "New York" };
+const myArray = Object.keys(person);
+// console.log(myArray)
+for (i of Object.values(person)) {
+  console.log(i);
+}
+
+// JS Classes
+class Car {
+  i = 0;
+  constructor(name, year) {
+    this.i = this.i + 1;
+    this.name = name;
+    this.year = year;
+    console.log(this.i + " object create");
+  }
+}
+new Car("ajay", 34);
+
