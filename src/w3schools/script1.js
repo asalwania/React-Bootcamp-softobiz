@@ -994,55 +994,97 @@
 // -----------------------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------------------
 
-// Js 2009(es5)
-// ECMAScript 2009, also known as es5, was the first major revision to javascript.
-// this.chapter describes the most important features of es5
+// // Js 2009(es5)
+// // ECMAScript 2009, also known as es5, was the first major revision to javascript.
+// // this.chapter describes the most important features of es5
 
-// "use strict":-
-// this defines that js code should be executed in "strict mode".
+// // "use strict":-
+// // this defines that js code should be executed in "strict mode".
 
-// String.trim():-
-// removes whitespace from both sides of a string
-let str = "       Hello wolrd!    ";
-console.log(str.trim());
+// // String.trim():-
+// // removes whitespace from both sides of a string
+// let str = "       Hello wolrd!    ";
+// console.log(str.trim());
 
-// Array.isArray()
-// this method checks whether an object is an array
-const fruits = ["banana", "orange", "apple", "mango"];
-console.log(Array.isArray(fruits));
+// // Array.isArray()
+// // this method checks whether an object is an array
+// const fruits = ["banana", "orange", "apple", "mango"];
+// console.log(Array.isArray(fruits));
 
-// Array.forEach()
-// Array.map()
-// Array.filter()
-// Array.reduce()
-// getter and setter
+// // Array.forEach()
+// // Array.map()
+// // Array.filter()
+// // Array.reduce()
+// // getter and setter
 
-// JS Objects
+// // JS Objects
 
-// properties:- these are the values associated with a js object
-// a js object is a collection of unordered properties.
-//properties can usually be changed, added and deleted, but some are readonly
+// // properties:- these are the values associated with a js object
+// // a js object is a collection of unordered properties.
+// //properties can usually be changed, added and deleted, but some are readonly
 
-// The this keyword
+// // The this keyword
 
-// in a function defination, this refers to the 'owner' of the fucntion
+// // in a function defination, this refers to the 'owner' of the fucntion
 
-const person = { name: "John", age: 30, city: "New York" };
-const myArray = Object.keys(person);
-// console.log(myArray)
-for (i of Object.values(person)) {
-  console.log(i);
+// const person = { name: "John", age: 30, city: "New York" };
+// const myArray = Object.keys(person);
+// // console.log(myArray)
+// for (i of Object.values(person)) {
+//   console.log(i);
+// }
+
+// // JS Classes
+// class Car {
+//   i = 0;
+//   constructor(name, year) {
+//     this.i = this.i + 1;
+//     this.name = name;
+//     this.year = year;
+//     console.log(this.i + " object create");
+//   }
+// }
+// new Car("ajay", 34);
+
+// Js function defination
+// js function are defined with function keyword
+// function as expression
+const x = function (a, b) {
+  return a * b;
+};
+// function constructor
+const y = new Function("a", "b", "return a * b");
+
+// function hoisting
+// hosting is js default behavior of moving declarations to the top of the currnet scope
+
+sum(4, 5);
+
+function sum(a, b) {
+  return a + b;
 }
 
-// JS Classes
-class Car {
-  i = 0;
-  constructor(name, year) {
-    this.i = this.i + 1;
-    this.name = name;
-    this.year = year;
-    console.log(this.i + " object create");
-  }
-}
-new Car("ajay", 34);
+// self invoing functoin
+(function () {
+  var x = "hello";
+  console.log(x);
+})();
 
+// funtions are object
+// the type of operator in js returns function for functions,
+// but js functions best be described as objects
+// js functions both have properties and methods
+
+// arrow function
+const fun = (x, y) => x * y;
+
+// arrow function do not have their own this. they are not well suited for defining object methods
+// arrow function are not hoisted. they must be defined before they are used.
+// using const is safer than using var, because function expressio in a constant value
+function square(x) {
+  return x ** 2;
+}
+
+const arr=[1,2,3,4]
+const res = Math.max.apply(null,arr)
+console.log(res)
