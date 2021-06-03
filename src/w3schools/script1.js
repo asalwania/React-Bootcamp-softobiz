@@ -1049,42 +1049,152 @@
 // Js function defination
 // js function are defined with function keyword
 // function as expression
-const x = function (a, b) {
-  return a * b;
-};
-// function constructor
-const y = new Function("a", "b", "return a * b");
+// const x = function (a, b) {
+//   return a * b;
+// };
+// // function constructor
+// const y = new Function("a", "b", "return a * b");
 
-// function hoisting
-// hosting is js default behavior of moving declarations to the top of the currnet scope
+// // function hoisting
+// // hosting is js default behavior of moving declarations to the top of the currnet scope
 
-sum(4, 5);
+// sum(4, 5);
 
-function sum(a, b) {
-  return a + b;
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// // self invoing functoin
+// (function () {
+//   var x = "hello";
+//   console.log(x);
+// })();
+
+// // funtions are object
+// // the type of operator in js returns function for functions,
+// // but js functions best be described as objects
+// // js functions both have properties and methods
+
+// // arrow function
+// const fun = (x, y) => x * y;
+
+// // arrow function do not have their own this. they are not well suited for defining object methods
+// // arrow function are not hoisted. they must be defined before they are used.
+// // using const is safer than using var, because function expressio in a constant value
+// function square(x) {
+//   return x ** 2;
+// }
+
+// const arr=[1,2,3,4]
+// const res = Math.max.apply(null,arr)
+// console.log(res)
+
+// -----------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------
+// Classes :-
+
+// the constructor methos
+// it is a speciat method, which is automatically called executed
+// when new object is created and it is used to inialize object properties
+
+// class methods:-
+// class methods are created the  same syntext as object methods
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
 }
 
-// self invoing functoin
-(function () {
-  var x = "hello";
-  console.log(x);
-})();
+let myCar = new Car("Ford", 2014);
+console.log(myCar.age())
 
-// funtions are object
-// the type of operator in js returns function for functions,
-// but js functions best be described as objects
-// js functions both have properties and methods
-
-// arrow function
-const fun = (x, y) => x * y;
-
-// arrow function do not have their own this. they are not well suited for defining object methods
-// arrow function are not hoisted. they must be defined before they are used.
-// using const is safer than using var, because function expressio in a constant value
-function square(x) {
-  return x ** 2;
+// we can alos set parameters to methods
+class Car2 {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age(x) {
+    return x - this.year;
+  }
 }
 
-const arr=[1,2,3,4]
-const res = Math.max.apply(null,arr)
-console.log(res)
+let date = new Date();
+let year = date.getFullYear();
+
+let myCar2 = new Car2("Ford", 2014);
+console.log(myCar2.age(year))
+
+// class inheritance
+// to create a class inheritance , use the extends keyword
+// a class created with class inheritance inherits all the methods from onother class
+
+class Car3 {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return "I have a " + this.carname;
+  }
+}
+
+class Model extends Car3{
+  constructor(brand,mod){
+    super(brand);
+    this.model=mod;
+  }
+
+  show(){
+    return this.present() + ', it is a ' + this.model
+  }
+}
+
+let myCar3 = new Model("Ford", "Mustang");
+console.log(myCar3.show())
+
+// the super method refers to te parent class
+
+
+// getter and setter
+// it can be smart to use getter and setter for your porperties,
+// especiall if you want to do something special with the value before,
+// returning them, or before you set them
+// to add getter and setter in the class, use the get and set keywords.
+
+
+// static methods 
+// static class methods are defined on the class itself.
+// you cannot call a static method on an object, only on an object class
+class Car4 {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+let myCar4 = new Car4("Ford");
+
+// hello method can be called on Car4 class not on myCar4 object
+console.log(Car4.hello())
+
+
+// Js Callbacks 
+// js functions are executed in the sequence they are called. not in the squence the are defined
+// e.g.
+// function myFirst() {
+//   myDisplayer("Hello");
+// }
+
+// function mySecond() {
+//   myDisplayer("Goodbye");
+// }
+
+// myFirst();
+// mySecond();
