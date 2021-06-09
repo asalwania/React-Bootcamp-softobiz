@@ -13,7 +13,6 @@ const a = [
   { id: 10, parentId: 5 },
 ];
 
-
 // function to get all parent id's
 function getParents(data) {
   const output = [...new Set(data.map((x) => x.parentId))];
@@ -46,13 +45,13 @@ function getAllChildren(parentId, data) {
   return output;
 }
 
+console.log(getAllChildren(2,a))
 // show data on homepage
-function changeHandler(){
-    const selectBox = document.getElementById("selectBox");
-    const selectedValue=selectBox.options[selectBox.selectedIndex].value
-    const data = getAllChildren(+selectedValue,a)
-    document.getElementById('root').innerHTML=data
-
+function changeHandler() {
+  const selectBox = document.getElementById("selectBox");
+  const selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  const data = getAllChildren(+selectedValue, a);
+  document.getElementById("root").innerHTML = data;
 }
 // console.log(getParents(a));
 // console.log(getChildren(1, a));

@@ -2,19 +2,12 @@
 const a = [
   { name: "first_name", alais: "FirstName", type: "string" },
   { name: "age", alais: "Age", type: "number" },
-  { name: "degree", alais: "Degree", type: "string" },
 ];
 const b = [
-  { first_name: "John", age: 23, degree: "BCA" },
-  { first_name: "Tom", age: 25, degree: "MBA" },
+  { first_name: "John", age: 23 },
+  { first_name: "Tom", age: 25 },
 ];
-// /*
-// output will be:
-// const c = [
-//   {FirstName: 'John', Age: 23},
-//   {FirstName: 'Tom', Age: 25}
-// ]
-// */
+
 function replaceNameToAlais(alaisArray, dataArray) {
   const output = [];
 
@@ -33,3 +26,11 @@ function replaceNameToAlais(alaisArray, dataArray) {
 
 const c = replaceNameToAlais(a, b);
 console.log(c);
+
+// /*
+// output will be:
+// const c = [
+//   {FirstName: 'John', Age: 23},
+//   {FirstName: 'Tom', Age: 25}
+// ]
+// */
