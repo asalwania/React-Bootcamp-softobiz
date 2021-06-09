@@ -8,7 +8,8 @@
     "start": "nodemon src/w3schools/script1.js",
     "task1": "nodemon src/assignment1/task1.js",
     "task2": "nodemon src/assignment1/task2.js",
-    "task3": "nodemon src/assignment1/task3.js"
+    "task3": "nodemon src/assignment1/task3.js",
+    "start:react": ""
   },
   "repository": {
     "type": "git",
